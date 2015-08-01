@@ -32,3 +32,6 @@ def target_puzzle(puzzle_letters, obligatory):
                                     and obligatory in w
                                     and nltk.FreqDist(w) <= puzzle_letters]
     return solutions 
+
+def stress(pron):
+    return [char for phone in pron for char in phone if char.isdigit()]
